@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.TataSurya" parent="Base.Theme.TataSurya" />
+
+    <style name="Theme.TataSurya.StartingScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/light_grey</item>
+        <item name="windowSplashScreenAnimationDuration">500</item>
+        <item name="postSplashScreenTheme">@style/Theme.TataSurya</item>
+    </style>
 </resources>

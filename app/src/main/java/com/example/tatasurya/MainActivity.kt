@@ -18,9 +18,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        installSplashScreen()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.rvPlanet.setHasFixedSize(true)
@@ -42,7 +42,13 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.profile -> {
+                val person = Person(
+                    "Muhammad Zulfan Wahyudin",
+                    "mzulfan303@gmail.com",
+                    R.drawable.ic_me
+                )
                 val moveAboutIntent = Intent(this@MainActivity, AboutActivity::class.java)
+                moveAboutIntent.putExtra(AboutActivity.EXTRA_PERSON, person)
                 startActivity(moveAboutIntent)
             }
         }

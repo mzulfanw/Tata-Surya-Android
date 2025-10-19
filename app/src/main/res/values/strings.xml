@@ -6,6 +6,7 @@
 
     <string name="placeholder_name">Nama Plannet</string>
     <string name="placeholder_description">Deskripsi</string>
+    <string name="share">Bagikan</string>
 
     <string-array name="planet_names">
         <item>Merkurius</item>
